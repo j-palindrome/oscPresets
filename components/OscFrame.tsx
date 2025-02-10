@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 import { io } from 'socket.io-client'
 import { PresetSocket, setters } from '../modules/store'
 import { SocketProvider } from './context'
-import '../dist.css'
 
 export function OscFrame({ children }: React.PropsWithChildren) {
   const [socket, setSocket] = useState<PresetSocket>()

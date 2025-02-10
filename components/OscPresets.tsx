@@ -8,7 +8,6 @@ import {
   useAppStore
 } from '../modules/store'
 import { useSocket } from './context'
-import '../dist.css'
 
 function PresetInput() {
   const allPresets = useAppStore(state => state.presets)
