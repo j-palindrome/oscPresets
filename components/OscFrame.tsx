@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { io } from 'socket.io-client'
-import { PresetSocket, setters } from '../../../controls/src/store'
+import { PresetSocket, setters } from '../modules/store'
 import { SocketProvider } from './context'
 
 export function OscFrame({ children }: React.PropsWithChildren) {

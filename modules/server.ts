@@ -6,7 +6,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { Server as SocketServer } from 'socket.io'
 import ViteExpress from 'vite-express'
-import { Schema, SocketEvents } from '../../../src/store'
+import { Schema, SocketEvents } from './store'
 
 export const setupServer = (config: Schema) => {
   const app = express()

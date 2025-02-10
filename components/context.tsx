@@ -1,5 +1,5 @@
 import { createContext, useContext } from 'react'
-import { PresetSocket } from '../../../controls/src/store'
+import { PresetSocket } from '../modules/store'
 
 const context = createContext<PresetSocket>(null!)
 
