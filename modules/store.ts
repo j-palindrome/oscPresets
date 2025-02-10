@@ -2,7 +2,7 @@ import { produce } from 'immer'
 import _ from 'lodash'
 import { Socket } from 'socket.io-client'
 import { create } from 'zustand'
-import config from '../../src/config'
+import config from '../../../src/controls/config'
 
 export type PresetValueDescription =
   | { type: 'slider'; default: number }
