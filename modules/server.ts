@@ -65,7 +65,7 @@ export const setupServer = (config: Schema) => {
       switch (type) {
         case 'encode':
           exec(
-            `cd ../exports && ffmpeg -i ${info.timestamp}.mov -i ${
+            `cd ./exports && ffmpeg -i ${info.timestamp}.mov -i ${
               info.timestamp
             }.wav -c:v copy -c:a copy -map 0:v:0 -map 1:a:0 ${
               info.timestamp

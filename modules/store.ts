@@ -20,9 +20,9 @@ export type PresetValueDescription =
 
 export type Schema = Record<string, PresetValueDescription>
 export type SchemaPreset<T extends Schema> = {
-  [K in keyof T]: Partial<Omit<T[K], 'type'>> & { value: T[K]['default'] }
+  [K in keyof T]: PresetValue<T[K]>
 }
-
+export type PresetValue<T extends PresetValueDescription> = T['default']
 export type AppState<T extends Schema> = {
   schema: T
   preset: SchemaPreset<T>
