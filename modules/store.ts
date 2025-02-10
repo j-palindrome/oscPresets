@@ -1,8 +1,8 @@
 import { produce } from 'immer'
 import _ from 'lodash'
 import { Socket } from 'socket.io-client'
-import { createWithEqualityFn } from 'zustand/traditional'
-import config from '../../../controls/src/config'
+import { create } from 'zustand'
+import config from '../../src/config'
 
 export type PresetValueDescription =
   | { type: 'slider'; default: number }
@@ -50,7 +50,7 @@ const createStateFromSchema = <T extends Schema>(schema: T): AppState<T> => {
 }
 const initialState = createStateFromSchema(config)
 
-export const useAppStore = createWithEqualityFn(() => initialState)
+export const useAppStore = create(() => initialState)
 
 const modify = (modifier: (state: typeof initialState) => void) =>
   useAppStore.setState(produce(modifier))
