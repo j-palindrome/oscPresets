@@ -7,7 +7,7 @@ import {
   setters,
   useAppStore
 } from '../modules/store'
-import { useSocket } from './context'
+import { useSocket } from '../../../src/controls/context'
 import { lerp, scale } from '../../util/math/math'
 import Toggle from './Toggle'
 

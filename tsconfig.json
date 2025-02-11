@@ -1,5 +1,9 @@
 {
-  "include": ["."],
+  "include": [
+    ".",
+    "../../src/controls/OscFrame.tsx",
+    "../../src/controls/context.tsx"
+  ],
   "compilerOptions": {
     "jsx": "react-jsx",
     "lib": ["ESNext", "DOM"],
