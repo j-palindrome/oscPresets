@@ -1,5 +1,5 @@
-import _ from 'lodash'
-import { useEffect } from 'react'
+import _, { now } from 'lodash'
+import { useEffect, useRef } from 'react'
 import {
   PresetValue,
   PresetValueDescription,
@@ -8,6 +8,8 @@ import {
   useAppStore
 } from '../modules/store'
 import { useSocket } from './context'
+import { lerp, scale } from '../../util/math/math'
+import Toggle from './Toggle'
 
 function PresetInput() {
   const allPresets = useAppStore(state => state.presets)
@@ -182,16 +184,28 @@ function PresetControl({ name }: { name: keyof Schema }) {
     case 'xy':
       return (
         <div
-          className='h-[100px] w-[100px]'
-          onMouseOver={ev => {
+          className='h-[100px] w-[100px] rounded-lg border'
+          onMouseMove={ev => {
             if (!ev.buttons) return
+
+            console.log(
+              (ev.clientX - ev.currentTarget.getBoundingClientRect().left) /
+                ev.currentTarget.clientWidth
+            )
+            const rect = ev.currentTarget.getBoundingClientRect()
             setters.setPreset(
               {
                 [name as string]: [
-                  (ev.clientX - ev.currentTarget.clientLeft) /
-                    ev.currentTarget.clientWidth,
-                  (ev.clientY - ev.currentTarget.clientTop) /
-                    ev.currentTarget.clientHeight
+                  lerp(
+                    0,
+                    description.bounds[0],
+                    (ev.clientX - rect.left) / rect.width
+                  ),
+                  lerp(
+                    0,
+                    description.bounds[1],
+                    1 - (ev.clientY - rect.top) / rect.height
+                  )
                 ]
               },
               socket
@@ -204,10 +218,53 @@ function PresetControl({ name }: { name: keyof Schema }) {
 }
 
 export default function OscPresets({ schema }: { schema: Schema }) {
+  const socket = useSocket()
+  let lastRecord = useRef(0)
   return (
     <>
       <div className='flex w-full overflow-auto space-x-2 h-[200px] items-center'>
         <PresetInput />
+        <Toggle
+          label='record'
+          cb={state => {
+            if (state) {
+              const nowStr = now()
+              socket.emit(
+                'get',
+                'path',
+                {
+                  relativePath: `./exports`
+                },
+                path => {
+                  socket.emit(
+                    'osc',
+                    'td',
+                    '/record/filename',
+                    path + `/${nowStr}.mov`
+                  )
+                  socket.emit(
+                    'osc',
+                    'max',
+                    '/record/filename',
+                    `open`,
+                    `${path}/${nowStr}.wav`
+                  )
+                  lastRecord.current = nowStr
+                  window.setTimeout(
+                    () => socket.emit('osc', 'all', '/record/status', 1),
+                    500
+                  )
+                }
+              )
+            } else {
+              console.log('stop')
+              socket.emit('osc', 'all', '/record/status', 0)
+              socket.emit('do', 'encode', {
+                timestamp: lastRecord.current
+              })
+            }
+          }}
+        />
         {Object.keys(schema)
           .sort()
           .map(key => (
