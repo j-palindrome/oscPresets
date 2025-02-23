@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 115.0, 1212.0, 650.0 ],
+		"rect" : [ 34.0, 115.0, 772.0, 901.0 ],
 		"openinpresentation" : 1,
 		"default_fontsize" : 10.0,
 		"default_fontname" : "Fira Code Regular",
@@ -38,10 +38,10 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 570.0, 165.0, 50.0, 45.0 ],
+					"patching_rect" : [ 570.0, 165.0, 58.0, 45.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 15.0, 240.0, 255.0, 21.0 ],
-					"text" : "/record/status 0"
+					"text" : "/channels/loopback 17 18"
 				}
 
 			}
@@ -76,12 +76,12 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-51",
-					"linecount" : 13,
+					"linecount" : 3,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 210.0, 735.0, 50.0, 169.0 ],
+					"patching_rect" : [ 210.0, 735.0, 375.0, 45.0 ],
 					"text" : "open /Users/jreinier/Documents/GitHub/j-instrument/exports/1739207336209.wav"
 				}
 
@@ -141,7 +141,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1140.0, 630.0, 82.0, 21.0 ],
+					"patching_rect" : [ 1020.0, 615.0, 82.0, 21.0 ],
 					"text" : "set $1, bang"
 				}
 
@@ -153,7 +153,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 1020.0, 630.0, 100.0, 21.0 ],
+					"patching_rect" : [ 1125.0, 615.0, 100.0, 21.0 ],
 					"text" : "loadbang"
 				}
 
@@ -161,7 +161,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-39",
-					"items" : [ "None", ",", "EPSON PJ", ",", "BlackHole 16ch", ",", "BlackHole 2ch", ",", "BlackHole 64ch", ",", "MacBook Air Speakers", ",", "NDI Audio", ",", "ZoomAudioDevice", ",", "UltraLite & BlackHole", ",", "Mac & BlackHole", ",", "BlackHole Ultralite" ],
+					"items" : [ "None", ",", "BlackHole 16ch", ",", "BlackHole 2ch", ",", "BlackHole 64ch", ",", "MacBook Air Speakers", ",", "NDI Audio", ",", "ZoomAudioDevice", ",", "UltraLite & BlackHole", ",", "Headphones & BlackHole", ",", "BlackHole Ultralite", ",", "Mac & BlackHole" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -188,7 +188,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-36",
-					"items" : [ "None", ",", "NDI Audio", ",", "BlackHole 16ch", ",", "BlackHole 2ch", ",", "BlackHole 64ch", ",", "MacBook Air Microphone", ",", "ZoomAudioDevice", ",", "UltraLite & BlackHole", ",", "Mac & BlackHole", ",", "BlackHole Ultralite" ],
+					"items" : [ "None", ",", "NDI Audio", ",", "BlackHole 16ch", ",", "BlackHole 2ch", ",", "BlackHole 64ch", ",", "MacBook Air Microphone", ",", "Joshua’s iPhone Microphone", ",", "ZoomAudioDevice", ",", "UltraLite & BlackHole", ",", "Headphones & BlackHole", ",", "BlackHole Ultralite", ",", "Mac & BlackHole" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -222,7 +222,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 310.0, 630.0, 50.0, 21.0 ],
-					"text" : "17 18"
+					"text" : "1 2"
 				}
 
 			}
@@ -246,7 +246,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 473.5, 630.0, 50.0, 21.0 ],
-					"text" : "15 16"
+					"text" : "17 18"
 				}
 
 			}
@@ -320,7 +320,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 433.5, 420.0, 50.0, 21.0 ],
-					"text" : "1 2"
+					"text" : "2 3"
 				}
 
 			}
@@ -1596,7 +1596,7 @@
 
 							}
  ],
-						"originid" : "pat-94",
+						"originid" : "pat-14",
 						"styles" : [ 							{
 								"name" : "Joshua",
 								"default" : 								{
@@ -2120,7 +2120,7 @@
 
 			}
  ],
-		"originid" : "pat-92",
+		"originid" : "pat-12",
 		"styles" : [ 			{
 				"name" : "Joshua",
 				"default" : 				{
@@ -2134,12 +2134,13 @@
 						"type" : "color"
 					}
 ,
+					"clearcolor" : [ 0.0, 0.0, 0.0, 0.52 ],
 					"color" : [ 0.623529411764706, 0.796078431372549, 0.827450980392157, 1.0 ],
-					"editing_bgcolor" : [ 0.098039215686275, 0.098039215686275, 0.117647058823529, 1.0 ],
+					"editing_bgcolor" : [ 0.035294117647059, 0.035294117647059, 0.043137254901961, 1.0 ],
 					"fontname" : [ "Fira Code Regular" ],
 					"fontsize" : [ 10.0 ],
-					"locked_bgcolor" : [ 0.098039215686275, 0.098039215686275, 0.117647058823529, 1.0 ],
-					"patchlinecolor" : [ 1.0, 1.0, 1.0, 0.5 ],
+					"locked_bgcolor" : [ 0.035294117647059, 0.035294117647059, 0.043137254901961, 1.0 ],
+					"patchlinecolor" : [ 1.0, 1.0, 1.0, 0.2 ],
 					"selectioncolor" : [ 0.925490196078431, 0.847058823529412, 0.16078431372549, 1.0 ],
 					"stripecolor" : [ 0.243137254901961, 0.474509803921569, 0.701960784313725, 1.0 ],
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
