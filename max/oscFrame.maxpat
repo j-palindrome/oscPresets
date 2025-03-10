@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 115.0, 772.0, 901.0 ],
+		"rect" : [ 34.0, 115.0, 1612.0, 901.0 ],
 		"openinpresentation" : 1,
 		"default_fontsize" : 10.0,
 		"default_fontname" : "Fira Code Regular",
@@ -32,21 +32,6 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-32",
-					"linecount" : 3,
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 570.0, 165.0, 58.0, 45.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 15.0, 240.0, 255.0, 21.0 ],
-					"text" : "/channels/loopback 17 18"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-12",
 					"maxclass" : "live.toggle",
 					"numinlets" : 1,
@@ -59,7 +44,8 @@
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_enum" : [ "off", "on" ],
-							"parameter_longname" : "live.toggle",
+							"parameter_linknames" : 1,
+							"parameter_longname" : "record",
 							"parameter_mmax" : 1,
 							"parameter_modmode" : 0,
 							"parameter_osc_name" : "<default>",
@@ -69,7 +55,7 @@
 
 					}
 ,
-					"varname" : "live.toggle"
+					"varname" : "record"
 				}
 
 			}
@@ -161,7 +147,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-39",
-					"items" : [ "None", ",", "BlackHole 16ch", ",", "BlackHole 2ch", ",", "BlackHole 64ch", ",", "MacBook Air Speakers", ",", "NDI Audio", ",", "ZoomAudioDevice", ",", "UltraLite & BlackHole", ",", "Headphones & BlackHole", ",", "BlackHole Ultralite", ",", "Mac & BlackHole" ],
+					"items" : [ "None", ",", "BlackHole 16ch", ",", "BlackHole 2ch", ",", "BlackHole 64ch", ",", "MacBook Air Speakers", ",", "NDI Audio", ",", "EPSON Projector UD Audio", ",", "ZoomAudioDevice", ",", "UltraLite & BlackHole", ",", "Headphones & BlackHole", ",", "BlackHole Ultralite", ",", "Mac & BlackHole" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -188,7 +174,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-36",
-					"items" : [ "None", ",", "NDI Audio", ",", "BlackHole 16ch", ",", "BlackHole 2ch", ",", "BlackHole 64ch", ",", "MacBook Air Microphone", ",", "Joshua’s iPhone Microphone", ",", "ZoomAudioDevice", ",", "UltraLite & BlackHole", ",", "Headphones & BlackHole", ",", "BlackHole Ultralite", ",", "Mac & BlackHole" ],
+					"items" : [ "None", ",", "NDI Audio", ",", "BlackHole 16ch", ",", "BlackHole 2ch", ",", "BlackHole 64ch", ",", "MacBook Air Microphone", ",", "Joshua’s iPhone Microphone", ",", "EPSON Projector UD Audio", ",", "ZoomAudioDevice", ",", "UltraLite & BlackHole", ",", "Headphones & BlackHole", ",", "BlackHole Ultralite", ",", "Mac & BlackHole" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -374,7 +360,8 @@
 					"presentation_rect" : [ 105.0, 15.0, 48.0, 136.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_longname" : "mc.live.gain~",
+							"parameter_linknames" : 1,
+							"parameter_longname" : "out-volume",
 							"parameter_mmax" : 6.0,
 							"parameter_mmin" : -70.0,
 							"parameter_modmode" : 3,
@@ -386,7 +373,7 @@
 
 					}
 ,
-					"varname" : "mc.live.gain~"
+					"varname" : "out-volume"
 				}
 
 			}
@@ -466,7 +453,8 @@
 					"presentation_rect" : [ 55.0, 15.0, 48.0, 136.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_longname" : "live.gain~[1]",
+							"parameter_linknames" : 1,
+							"parameter_longname" : "in2-volume",
 							"parameter_mmax" : 6.0,
 							"parameter_mmin" : -70.0,
 							"parameter_modmode" : 3,
@@ -478,7 +466,7 @@
 
 					}
 ,
-					"varname" : "live.gain~[1]"
+					"varname" : "in2-volume"
 				}
 
 			}
@@ -496,7 +484,8 @@
 					"presentation_rect" : [ 5.0, 15.0, 48.0, 136.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_longname" : "live.gain~",
+							"parameter_linknames" : 1,
+							"parameter_longname" : "in1-volume",
 							"parameter_mmax" : 6.0,
 							"parameter_mmin" : -70.0,
 							"parameter_modmode" : 3,
@@ -508,7 +497,7 @@
 
 					}
 ,
-					"varname" : "live.gain~"
+					"varname" : "in1-volume"
 				}
 
 			}
@@ -917,7 +906,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 291.888113021850586, 1169.510499536991119, 50.0, 21.0 ],
-									"text" : "42 0"
+									"text" : "13 0"
 								}
 
 							}
@@ -1596,7 +1585,7 @@
 
 							}
  ],
-						"originid" : "pat-14",
+						"originid" : "pat-22",
 						"styles" : [ 							{
 								"name" : "Joshua",
 								"default" : 								{
@@ -1996,15 +1985,6 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-29", 0 ],
-					"order" : 0,
-					"source" : [ "obj-31", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-32", 1 ],
-					"order" : 1,
 					"source" : [ "obj-31", 0 ]
 				}
 
@@ -2120,7 +2100,7 @@
 
 			}
  ],
-		"originid" : "pat-12",
+		"originid" : "pat-20",
 		"styles" : [ 			{
 				"name" : "Joshua",
 				"default" : 				{
@@ -2151,7 +2131,8 @@
 				"parentstyle" : "",
 				"multi" : 0
 			}
- ]
+ ],
+		"oscreceiveudpport" : 30338
 	}
 
 }
