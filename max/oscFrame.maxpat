@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 9,
 			"minor" : 0,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 115.0, 1612.0, 901.0 ],
+		"rect" : [ 34.0, 116.0, 1372.0, 751.0 ],
 		"openinpresentation" : 1,
 		"default_fontsize" : 10.0,
 		"default_fontname" : "Fira Code Regular",
@@ -48,7 +48,6 @@
 							"parameter_longname" : "record",
 							"parameter_mmax" : 1,
 							"parameter_modmode" : 0,
-							"parameter_osc_name" : "<default>",
 							"parameter_shortname" : "live.toggle",
 							"parameter_type" : 2
 						}
@@ -147,7 +146,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-39",
-					"items" : [ "None", ",", "BlackHole 16ch", ",", "BlackHole 2ch", ",", "BlackHole 64ch", ",", "MacBook Air Speakers", ",", "NDI Audio", ",", "EPSON Projector UD Audio", ",", "ZoomAudioDevice", ",", "UltraLite & BlackHole", ",", "Headphones & BlackHole", ",", "BlackHole Ultralite", ",", "Mac & BlackHole" ],
+					"items" : [ "None", ",", "EPSON PJ", ",", "BlackHole 16ch", ",", "BlackHole 2ch", ",", "BlackHole 64ch", ",", "External Headphones", ",", "MacBook Air Speakers", ",", "NDI Audio", ",", "EPSON Projector UD Audio", ",", "UltraLite AVB", ",", "ZoomAudioDevice", ",", "UltraLite & BlackHole", ",", "Headphones & BlackHole", ",", "BlackHole Ultralite", ",", "Mac & BlackHole", ",", "Headphones & UltraLite" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -174,7 +173,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-36",
-					"items" : [ "None", ",", "NDI Audio", ",", "BlackHole 16ch", ",", "BlackHole 2ch", ",", "BlackHole 64ch", ",", "MacBook Air Microphone", ",", "Joshua’s iPhone Microphone", ",", "EPSON Projector UD Audio", ",", "ZoomAudioDevice", ",", "UltraLite & BlackHole", ",", "Headphones & BlackHole", ",", "BlackHole Ultralite", ",", "Mac & BlackHole" ],
+					"items" : [ "None", ",", "NDI Audio", ",", "BlackHole 16ch", ",", "BlackHole 2ch", ",", "BlackHole 64ch", ",", "MacBook Air Microphone", ",", "Joshua’s iPhone Microphone", ",", "EPSON Projector UD Audio", ",", "UltraLite AVB", ",", "ZoomAudioDevice", ",", "UltraLite & BlackHole", ",", "Headphones & BlackHole", ",", "BlackHole Ultralite", ",", "Mac & BlackHole", ",", "Headphones & UltraLite" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -250,15 +249,13 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-37",
-					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 720.0, 675.0, 270.0, 31.0 ],
+					"patching_rect" : [ 720.0, 675.0, 270.0, 19.0 ],
 					"presentation" : 1,
-					"presentation_linecount" : 2,
-					"presentation_rect" : [ 15.0, 195.0, 255.0, 31.0 ],
-					"text" : "Go to http://192.168.1.235:7001 from an iPad signed into same WiFi to access UI."
+					"presentation_rect" : [ 15.0, 195.0, 255.0, 19.0 ],
+					"text" : "http://192.168.1.235:7001"
 				}
 
 			}
@@ -355,7 +352,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "multichannelsignal", "", "float", "list" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 225.0, 285.0, 48.0, 136.0 ],
+					"patching_rect" : [ 225.0, 360.0, 48.0, 136.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 105.0, 15.0, 48.0, 136.0 ],
 					"saved_attribute_attributes" : 					{
@@ -365,7 +362,6 @@
 							"parameter_mmax" : 6.0,
 							"parameter_mmin" : -70.0,
 							"parameter_modmode" : 3,
-							"parameter_osc_name" : "<default>",
 							"parameter_shortname" : "OUT",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 4
@@ -384,7 +380,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "multichannelsignal" ],
-					"patching_rect" : [ 225.0, 450.0, 58.0, 21.0 ],
+					"patching_rect" : [ 225.0, 285.0, 58.0, 21.0 ],
 					"text" : "mc.limi~"
 				}
 
@@ -458,7 +454,6 @@
 							"parameter_mmax" : 6.0,
 							"parameter_mmin" : -70.0,
 							"parameter_modmode" : 3,
-							"parameter_osc_name" : "<default>",
 							"parameter_shortname" : "IN2",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 4
@@ -489,7 +484,6 @@
 							"parameter_mmax" : 6.0,
 							"parameter_mmin" : -70.0,
 							"parameter_modmode" : 3,
-							"parameter_osc_name" : "<default>",
 							"parameter_shortname" : "IN1",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 4
@@ -548,7 +542,7 @@
 						"appversion" : 						{
 							"major" : 9,
 							"minor" : 0,
-							"revision" : 4,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -906,7 +900,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 291.888113021850586, 1169.510499536991119, 50.0, 21.0 ],
-									"text" : "13 0"
+									"text" : "41 0"
 								}
 
 							}
@@ -1026,8 +1020,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 656.223781049251556, 719.860145330429077, 24.0, 24.0 ],
-									"svg" : ""
+									"patching_rect" : [ 656.223781049251556, 719.860145330429077, 24.0, 24.0 ]
 								}
 
 							}
@@ -1585,7 +1578,7 @@
 
 							}
  ],
-						"originid" : "pat-22",
+						"originid" : "pat-14",
 						"styles" : [ 							{
 								"name" : "Joshua",
 								"default" : 								{
@@ -1622,7 +1615,6 @@
 					"saved_object_attributes" : 					{
 						"fontname" : "Fira Code Regular",
 						"fontsize" : 10.0,
-						"globalpatchername" : "",
 						"style" : "Joshua"
 					}
 ,
@@ -1895,9 +1887,16 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-27", 0 ],
+					"source" : [ "obj-26", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-42", 0 ],
 					"order" : 0,
-					"source" : [ "obj-26", 0 ]
+					"source" : [ "obj-27", 0 ]
 				}
 
 			}
@@ -1905,7 +1904,7 @@
 				"patchline" : 				{
 					"destination" : [ "obj-49", 0 ],
 					"order" : 2,
-					"source" : [ "obj-26", 0 ]
+					"source" : [ "obj-27", 0 ]
 				}
 
 			}
@@ -1913,20 +1912,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-7", 0 ],
 					"order" : 1,
-					"source" : [ "obj-26", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-26", 0 ],
 					"source" : [ "obj-27", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-27", 0 ],
+					"destination" : [ "obj-26", 0 ],
 					"source" : [ "obj-28", 0 ]
 				}
 
@@ -2100,7 +2092,7 @@
 
 			}
  ],
-		"originid" : "pat-20",
+		"originid" : "pat-12",
 		"styles" : [ 			{
 				"name" : "Joshua",
 				"default" : 				{
@@ -2132,7 +2124,7 @@
 				"multi" : 0
 			}
  ],
-		"oscreceiveudpport" : 30338
+		"oscsendudpport" : 7000
 	}
 
 }
